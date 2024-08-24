@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F5FC;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Estilo del contenedor padre */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+/* Estilo del logo */
+.logo img {
+    position: absolute; /* Posiciona el logo de forma absoluta */
+    top: 40px; 
+    left: 40px; 
+    width: 120px; 
+    height: 48px; 
+    opacity: 1; 
+    
+}
+/* Estilo del fondo */
+.mi-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fondo.png'); /* Imagen con fondo transparente */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1; /* Coloca mi-fondo detrás de otros elementos */
+    opacity: 0.2; /* Ajusta la opacidad de mi-fondo para hacer el dibujo menos intenso */
+}
+
+/* Estilo del contenedor de entrada */
+.input_text {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del text area */
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    
+}
+
+/* Estilo de los botones */
+.button {
+    width: 178px;
+    background-color: #0A3871;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del contenedor de salida */
+.output_text {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result_output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.result_output textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.result_output .button_copiar {
+    width: 178px;
+    background-color: #0A3871;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Estilo del footer */
+.footer {
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    z-index: 2; /* Footer por encima del fondo */
+    position: relative;
+   
+}
+
+.footer-container {
+    background-color: #0A3871;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.footer-container p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: #fff; 
+    margin: 0 10px;
+    font-size: 48px;
+}
+
+/* Ajustes de los media quieries para el diseño responsivo */
+@media (max-width: 768px) {
+    .logo img {
+        width: 80px;
+        height: 32px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .mi-fondo {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .input_text, .output_text, .result_output {
+        width: 90%;
+        max-width: none;
+    }
+
+    .button, .result_output .button_copiar {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .input_text, .output_text {
+        padding: 15px;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    .footer-container {
+        font-size: 12px; 
+    }
+}

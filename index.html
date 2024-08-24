@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Reto Encriptador</title>
+</head>
+<body>
+    <main class="main">
+        <div class="logo">
+            <img src="img/Logo.svg" alt="logo">
+        </div>
+        <div class="mi-fondo"></div>
+        <div class="container">
+            <div class="input_text">
+                <textarea class="input_text_encrypt" id="input_text_encrypt" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="bottom">
+                    <small>Escriba solo letras minúsculas y sin acentos</small>
+                    <div class="buttons">
+                        <button class="button button_encrypt" id="button_encrypt">Encriptar</button>
+                        <button class="button button_decrypt" id="button_decrypt">Desencriptar</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        
+        <div class="output_text" id="output_text">
+            <div class="result no_texto">
+                <div class="no_output">
+                    <p> Ingrese el texto que desee encriptar o desencriptar.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="result_output">
+            <textarea class="output_text_decrypt" id="output_text_decrypt"></textarea>
+            <button class="button button_decrypt button_copiar" id="button_copiar">Copiar</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p> Fuente imagen: (yopikwb, 2024) <a href="https://es.vecteezy.com/vectores-gratis/aventura">Aventura Vectores por Vecteezy</a></p>
+            <p> Francia Milena Suárez    © Derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://github.com/maegmail" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
